@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* page setup */
+  --min-height: 100vh;
+  --min-width: 320px;
+  --max-weight: 100vw;
+  --base-size: 10px;
+
+  /* margin and padding */
+  --mg-08: 0.8em;
+  --mg-1: 1em;
+  --mg-14: 1.4em;
+  --mg-2: 2em;
+
+  --pd-04: 0.4rem;
+  --pd-08: 0.8rem;
+  --pd-12: 1.2rem;
+
+  /* font weight */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi: 600;
+  --font-bold: 800;
+
+  /* typography */
+  --font-fmly: "Poppins", sans-serif;
+
+  /* color */
+  /* --clr-primary: #061211; */
+  --clr-primary: #90ece5;
+  --clr-secondary: #26a196;
+  --clr-white: #8c94af;
+  --clr-border: #e3e3e3;
+  --clr-red: #e95353;
+  --clr-text-dark: #1d1919;
+  --clr-text-light: #e4f0f0;
+  --clr-focus: #374bff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-fmly);
+  font-size: var(--base-size);
+}
+
+button,
+input {
+  font-family: inherit !important;
+  font-size: 100%;
+  line-height: 1.4532;
+  border: none;
+  outline: none !important;
+}
+
+h1,
+h2,
+span,
+p {
+  font-weight: var(--font-light);
+}
+
+body {
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  min-height: var(--min-height);
+  color: var(--clr-text-dark);
+  background-color: var(--clr-primary);
+}
+
+main {
+  max-width: 576px;
+  margin: 0 auto;
+}
+
+main #app {
+  min-width: var(--min-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pd-08);
+}
+
+/* highest score */
+.highest-score {
+  font-size: 1.6rem;
+  margin-top: var(--mg-08);
+}
+
+/* instruction */
+.instruction {
+  text-align: center;
+  padding: var(--pd-12);
+  margin-top: 4vh;
+  border-radius: 0.4rem;
+  background-color: var(--clr-secondary);
+  outline: 1px solid var(--clr-secondary);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.instruction h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05;
+}
+.instruction p {
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+  margin-top: var(--mg-08);
+  color: var(--clr-text-light);
+}
+
+/* timmer */
+
+.time-left {
+  font-size: 1.4rem;
+  margin-top: var(--mg-2);
+}
+.time-left span {
+  color: var(--clr-red);
+  font-weight: 500;
+  margin-left: var(--mg-04);
+}
+
+/* displayed text */
+.text {
+  font-size: 2.8rem;
+  letter-spacing: 0.05rem;
+  margin-top: 8vh;
+  text-transform: capitalize;
+}
+
+input {
+  border: 1px solid;
+  font-size: 1.4rem;
+  width: 100%;
+  min-width: var(--min-width);
+  text-indent: var(--pd-04);
+  padding: var(--pd-12) var(--pd-04);
+  border-radius: 0.4rem;
+  margin-top: var(--mg-14);
+}
+
+input:focus {
+  border: 1px solid var(--clr-focus);
+}
